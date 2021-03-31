@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas template</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <!-- <script src="function.js"></script> -->
+</head>
+
+<body>
+    
+    <canvas id="myCanvas" width="1000" height="500" >
+    </canvas>
+   
+    <button id="canvasDrawBtn" class="button">draw</button>
+    <button id="reset" class="button">restart</button>
+    <button id="download" class="button">save</button>
+
+    <div class="infoField">
+        <div class="leftSide">
+            <h4>
+                Please input your values!
+            </h4>
+            
+            <table calss="matrixTable"> 
+                <tr>
+                    <th>X1: <input id="x1" type="number" value="1" required></th>
+                    <th>X2: <input id="x2" type="number" value="-1" required></th> 
+                
+                </tr>
+                <tr>
+                    <th>Y1: <input id="y1" type="number" value="1" required></td>
+                    <th>Y2: <input id="y2" type="number" value="1" required></td>
+                
+                </tr>
+                
+            </table>
+            
+        </div>
+
+        <div class="rightSide"> 
+            <div class="pvalueInput">
+                <h4>How many p-values do you want? :</h4>
+                <button id="myBtn" class="pvalueModalOpenBtn">Please select number from here.</button>
+            </div>
+
+            <h4>
+                Please set p-value info.
+            </h4>
+            <table id="pinfoTable">
+                <tr>
+                    <th>p-Value</th>
+                    <th>Color</th> 
+                    <th>Weight line</th>
+                </tr>
+                <tr>
+                    <td><input id="p1" type="number" value="0" required></td>
+                    <td><select name="color" id="colors1">
+                        <option value="green">green</option>
+                        <option value="purple">purple</option>
+                        <option value="blue">blue</option>
+                      </select></td>
+                    <td><input id="weightLine1" type="number" value="1" required></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modalHeader"> 
+                <span class="close">&times;</span>
+                <h3 class="modalTitle">Please select P-value number.</h3>
+            </div>
+            
+            <div class="pvalueInput modalContent">
+                <p>How many p-values do you want? : </p>
+                <input id="InputPvalue" type="number" min="1" value="1">
+            </div>
+            <div>
+                <button id="pvalueInputOkBtn" class="pvalueInputOkBtn button">Ok</button>
+            </div>
+            
+
+        </div>
+
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
